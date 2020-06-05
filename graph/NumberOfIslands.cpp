@@ -11,6 +11,9 @@ bool isSafe(int N,int M,int i,int j){
 }
 
 //this function does the DFS for every new one 1 found and assign every connected one to zero.
+/*Considering 8 directional connection*/
+
+
 void delIsland(vector<vector<ll>> &v,ll N,ll M,ll i, ll j){
 	if(isSafe(N,M,i,j) && v[i][j] == 1){
 		v[i][j]=0;
