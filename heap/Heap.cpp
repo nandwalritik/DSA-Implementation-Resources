@@ -20,9 +20,9 @@ struct Heap* makeHeap(int capacity,int heap_type){
 		return;
 	}
 	h->heap_type	= 	heap_type	;
-	h->count		= 	0		;
+	h->count	= 	0		;
 	h->capacity 	= 	capacity	;
-	h->array 		=	(int*)malloc(sizeof(int)*h->capacity);
+	h->array 	=	(int*)malloc(sizeof(int)*h->capacity);
 	if(h->array == NULL)
 	{
 		cout<<"Memory Error\n";
@@ -108,7 +108,7 @@ void percolateUp(struct Heap *h,int &i)
 	• PercolateDown the first element
 */
 
-int deleteMax(struct Heap *h)
+int extractMax(struct Heap *h)
 {
 	int data;
 	if(h->count == 0)
