@@ -4,9 +4,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define MAX 1000
-void swap(int *a,int *b){
+void swap(int *a,int *b)
+{
 	int t = *a;*a = *b;*b = t;
-
 }
 void heapify(int A[],int n,int i){
 
@@ -33,60 +33,12 @@ void printArray(int A[],int n){
 }
 
 int main(){
-	int arr[MAX] = { 10, 5, 3, 2, 4 }; 
-  
-    int n = 5; 
 	
-  
-    int key = 15; 
-  
-    insertNode(arr, n, key); 
-  
-    printArray(arr, n); 
+	int arr[MAX] = { 10, 5, 3, 2, 4 }; 
+    	int n = 5; 
+    	int key = 15; 
+	insertNode(arr, n, key); 
+	printArray(arr, n); 
+
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// #include<stdio.h>
-// struct Tree{
-// 	int data;
-// 	struct Tree *left,*right;
-// };
-// struct Node* newNode(int key){
-// 	struct Node* temp = (struct Node* )malloc(sizeof(struct Node));
-// 	temp->key = key;
-// 	temp->left=temp->right=NULL;
-// 	return temp;
-
-// };
-
-
-// int main(){
-// 	return 0;
-// }

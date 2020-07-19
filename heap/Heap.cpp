@@ -16,7 +16,7 @@ struct Heap* makeHeap(int capacity,int heap_type){
 	struct Heap* h = (struct Heap*)malloc(sizeof(struct Heap));
 	if(h == NULL)
 	{
-		printf("Memory Error\n");
+		cout<<"Memory Error\n";
 		return;
 	}
 	h->heap_type	= 	heap_type	;
@@ -25,7 +25,7 @@ struct Heap* makeHeap(int capacity,int heap_type){
 	h->array 		=	(int*)malloc(sizeof(int)*h->capacity);
 	if(h->array == NULL)
 	{
-		printf("Memory Error");
+		cout<<"Memory Error\n";
 		return;
 	}
 	return h;
@@ -144,7 +144,7 @@ void resizeHeap(struct Heap *h)
 	h->array = (int*)malloc(sizeof(int)*h->capacity*2);
 	if(h->array == NULL)
 	{
-		printf("Memory Error\n");
+		cout<<"Memory Error\n";
 		return;
 	}
 	for(int i=0;i < h->capacity ; i++)
@@ -188,11 +188,10 @@ void HeapSort(int A[],int n)
 	old_size = h->count;
 	for(i=n-1;i>=0;i--){
 		/*h->array[0] is the largest element*/
-		temp = h->array[0];
-		h->array[0]=h->array[h->count-1];
-		h->array[0]=temp;
+		swap(&h->array[0],&h->array[h->count-1]);
 		h->count--;
 		percolateDown(h,0);
 	}  
 	h->count = old_size;
 }
+
