@@ -20,9 +20,9 @@ struct Heap* makeHeap(int capacity,int heap_type){
 		return;
 	}
 	h->heap_type	= 	heap_type	;
-	h->count		= 	0		;
+	h->count	= 	0		;
 	h->capacity 	= 	capacity	;
-	h->array 		=	(int*)malloc(sizeof(int)*h->capacity);
+	h->array 	=	(int*)malloc(sizeof(int)*h->capacity);
 	if(h->array == NULL)
 	{
 		printf("Memory Error");
