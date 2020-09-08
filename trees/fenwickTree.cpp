@@ -11,7 +11,9 @@
 
 	Every Number can be represented as sum of powers of 2.
 	Fenwick tree uses this information to store numbers.
-
+	
+	Two's Complement :- the negative of a binary number represented by switching all ones to zeros and all zeros to ones and then adding one to the result.
+	
 	GetParent									Time complexity : O(1)
 	1.) Find 2's complement
 	2.) AND it with original Number.
