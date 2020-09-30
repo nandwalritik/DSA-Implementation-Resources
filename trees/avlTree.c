@@ -9,7 +9,6 @@ struct Node{
 	int height;
 };
 
-int max(int a,int b);
 int height(struct Node *N){
 	if(N == NULL)
 		return 0;
@@ -43,7 +42,7 @@ struct Node *rightRotate(struct Node *y){
 	return y;
 }
 
-struct Node *leftRotate(struct Node *y){
+struct Node *leftRotate(struct Node *y){ 
 	struct Node *x 	= y->right;
 	struct Node *T2	= x->left; 
 
@@ -63,11 +62,9 @@ int getBalance(struct Node *N){
 }
 
 struct Node* insert(struct Node* node,int key){
-	
 	/*1. Normal BST Insertion	*/
 	if(node == NULL)
 		return(newNode(key));
-
 	if(key < node->key)
 		node->left = insert(node->left,key);
 	else if(key > node->key)
@@ -93,7 +90,5 @@ struct Node* insert(struct Node* node,int key){
 		node->right = rightRotate(node->right);
 		return leftRotate(node);
 	}
-
 	return node;
-
 }

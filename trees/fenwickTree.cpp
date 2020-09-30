@@ -5,8 +5,8 @@
 	search query complexity : O(logn)
 
 	To find the parent of node in fenwick tree flip the rightmost bit in the binary representation of number.
-			Node   Binary ParentBinary   parentDecimal
-	Example 11 	-> 1011   1010 		  -> 10
+			Node   	Binary 	ParentBinary   	parentDecimal
+	Example 	11 	->	 1011   	1010 		  -> 	    10
 
 
 	Every Number can be represented as sum of powers of 2.
@@ -28,7 +28,7 @@
 */
 #include<bits/stdc++.h>
 using namespace std;
-
+/*	1 based indexing is used	*/
 class FenwickTree{
 	int N;
 	vector<int> tree;
