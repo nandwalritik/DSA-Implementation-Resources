@@ -2,6 +2,8 @@
 #define INF INT_MAX;
 #define maxSize 1000;
 using namespace std;
+
+/* Max Heap Class based Implementation */
 struct Heap{
 	int maxSize;
 	int size;	/*size of the heap*/
