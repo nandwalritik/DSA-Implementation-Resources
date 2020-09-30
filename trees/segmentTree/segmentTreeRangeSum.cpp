@@ -1,6 +1,48 @@
 #include<bits/stdc++.h>
 using namespace std;
+/*
+https://codeforces.com/contest/339/status/D?friends=on -------------- for this question
+	a little bit simpler implementation
+vector<ll> segment_tree(4*(1<<17)+1),arr((1<<17)+1);
+void build(ll parent,ll start,ll end,ll level){
+	if(start>end)
+		return;
+	if(start == end){
+		segment_tree[parent] = arr[start];
+		return;
+	}
+	ll mid = (start+end)/2;
+	build(2*parent+1,start,mid,level-1);
+	build(2*parent+2,mid+1,end,level-1);
+	if(!(level&1)){
+		segment_tree[parent] = segment_tree[2*parent+1]|segment_tree[2*parent+2];
+	}
+	else{
+		segment_tree[parent] = segment_tree[2*parent+1]^segment_tree[2*parent+2]; 
+	}
+	return;
+}	
+void update(ll parent,ll start,ll end,ll pos,ll val,ll level){
+	if(start > end)
+		return;
+	if(start == end && start == pos){
+		segment_tree[parent] = val;
+		return;
+	}	
+	ll mid = (start+end)/2;
+	if(pos>=start && pos<=mid){
+		update(2*parent+1,start,mid,pos,val,level-1);
+	}else{
+		update(2*parent+2,mid+1,end,pos,val,level-1);
+	}	
+	if(!(level&1))
+		segment_tree[parent] = segment_tree[2*parent+1] | segment_tree[2*parent+2];
+	else
+		segment_tree[parent] = segment_tree[2*parent+1]^segment_tree[2*parent+2];	 
+	return;
+}
 
+*/
 struct SegmentTree{
 	/*Using one based indexing*/
 	vector<int> tree;
