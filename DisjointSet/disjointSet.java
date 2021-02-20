@@ -109,6 +109,8 @@ void union_sets(int u,int v){
 	int par_u = find_parent(u);
 	int par_v = find_parent(v);
 	if(par_u != par_v){
+		// jiski rank greater h voh parent banega
+		// if rank of both parents is equal then increase the rank of one , which we are making parent
 		if(rank[par_u] > rank[par_v]){
 			parent[par_v] = par_u;
 		}else{
