@@ -59,3 +59,37 @@ int main(){
 		cout<<"Graph doesn't contain cycle";
 	return 0;
 }
+     // Simpler Implementation Using CLRS white,gray,black Technique
+    /*bool dfs(vector<vector<int>> &adj,int u,vector<int> &color){
+        color[u]=1;
+        for(auto x:adj[u])
+        {
+            if(color[x] == 2)
+                continue;
+            else if(color[x] == 1)
+                return true;
+            else if(color[x] == 0 && dfs(adj,x,color))
+                return true;
+        }
+        color[u]=2;
+        return false;
+    }
+    bool canFinish(int n, vector<vector<int>>& p) {
+        vector<vector<int>> adj(n);
+        for(int i=0;i<p.size();i++)
+        {
+            for(int j=0;j<2;j++)
+            {
+                adj[p[i][1]].push_back(p[i][0]);
+            }
+        }
+        vector<int> visited(n,0);
+        bool ans;
+        for(int i=0;i<n;i++){
+            if(visited[i] == 0)
+                ans = dfs(adj,i,visited);
+            if(ans)
+                return !ans;
+        }
+        return true;
+    }*/
