@@ -156,5 +156,67 @@ int main(){
 	}
 	retrun 0;
 }
+// but if we also want to find the number of elements in each set
+// then we can initialize size(n,1) and then add size of element with lesser rank to size of element with larger rank
+// in case of equal rank add size of one being added to another set
+// https://www.hackerrank.com/challenges/journey-to-the-moon/problem ----> practice this to get an intuition
+#include<bits/stdc++.h>
+using namespace std;
+long long int find(vector<long long int> &parent,long long int i)
+{
+    return  i == parent[i] ? i : parent[i] = find(parent,parent[i]); 
+}
+void Union(vector<long long int> &parent,vector<long long int> &rank,vector<long long int> &sz,long long int i,long long int j){
+    long long int x = find(parent,i);
+    long long int y = find(parent,j);
+    if(x == y)
+        return;
+    else{
+        if(rank[x] > rank[y]){
+            parent[y]=x;
+            sz[x]+=sz[y];
+        }else if(rank[y] > rank[x]){
+            parent[x]=y;
+            sz[y]+=sz[x];
+        }else{
+            parent[x] = y;
+            // rank[y]++;
+            rank[y]++;
+            sz[y]+=sz[x];
+            // rank[y]+=rank[x];
+        }
+    }
+}
+int main(){
+    long long int n,k;
+    cin>>n>>k;
+    vector<long long int> parent(n),rank(n,1),sz(n,1);
+    for(long long int i=0;i<n;i++)
+        parent[i]=i;
+    for(long long int i=0;i<k;i++){
+        long long int u,v;
+        cin>>u>>v;
+        Union(parent,rank,sz,u,v);
+    }
+    set<long long int> vis;
+    vector<long long int > temp;
+    long long int ans=0,res=0;
+    for(int i=0;i<n;i++){
+        int temp = find(parent,i);
+        // cout<<i<<" "<<temp<<" "<<sz[temp]<<endl;
+        if(vis.find(temp) == vis.end()){
+            // temp.push_back(rank[parent[i]]);
+            res+=ans*sz[temp];
+            ans+=sz[temp];
+            
+            vis.insert(temp);
+        }
+    }
+    
+    cout<<res<<endl;
+        
+    return 0;
+}
+
 
 */
