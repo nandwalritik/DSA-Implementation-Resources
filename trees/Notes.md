@@ -1,31 +1,30 @@
-Some important terms:
-1.Root 		:-Node with no parents.
-2.Edge 		:-refers to the link from parent to child
-3.leaf Node :-node with no children
-4.depth of node  :-length of path from root to x.
-				 			or
-				    No. of edges in path from root to x.
+# Some important terms :-
+* Root 		:-Node with no parents.
+* Edge 		:-refers to the link from parent to child
+* leaf Node :- node with no children
+* depth of node  :-length of path from root to x or No. of edges in path from root to x.
 
-5.Height of Node :-	No. of edges in longest path from node to a leaf.
--------------------------------Binary trees-----------------------
-1.Binary trees :- A tree in which each node can have at most two children.
+* Height of Node :-	No. of edges in longest path from node to a leaf.
 
-2.Strict/Proper Binary tree :- each node can have 0 or 2 children
+# Binary trees
+* Binary trees :- A tree in which each node can have at most two children.
 
-3.Complete Binary tree :- All levels except possibly the last are completely filled and all nodes are as left as possible.
+* Strict/Proper Binary tree :- each node can have 0 or 2 children
 
-4.Perfect Binary tree  :- All levels are completely filled.
+* Complete Binary tree :- All levels except possibly the last are completely filled and all nodes are as left as possible.
 
-5.Binary Search Tree   :- A BT in which for each node value of all the nodes in left subtree is lesser or equal in comparison to the value of all the nodes in right subtree is greater. 
+* Perfect Binary tree  :- All levels are completely filled.
+
+* Binary Search Tree   :- A BT in which for each node value of all the nodes in left subtree is lesser or equal in comparison to the value of all the nodes in right subtree is greater. 
 
 
-three types of traversal:
-			1,2,3 are depth first type and 4 is breath first type
-1.Preorder (DLR) Traversal
-2.Inorder (LDR) Traversal    //Whenever we perform inorder traversal on binary search tree we get output in sorted order
+* Three types of traversal:
+**1,2,3 are depth first type and 4 is breath first type**
+* 1.Preorder (DLR) Traversal
+* 2.Inorder (LDR) Traversal    //Whenever we perform inorder traversal on binary search tree we get output in sorted order
 
-3.Postorder (LRD) Traversal
-4.Level Order Traversal: This method is inspired from Breadth First Traversal (BFS of Graph algorithms).
+* 3.Postorder (LRD) Traversal
+* 4.Level Order Traversal: This method is inspired from Breadth First Traversal (BFS of Graph algorithms).
 
 gfg articles link :- https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/;
 
@@ -95,28 +94,33 @@ Binnary Search Trees
 			3.
 				 		
 						
-###################################################### AVL TREES   ##################################################
-four cases 
-  Single rotation :
-                    left left
-                    right right
-  Double rotation :
-                    right left :- 1.rotateRight  2.rotateLeft
-                    left right :- 1.rotateLeft   2.rotateRight
-####################################################################################################################
-  checking a given tree is binary search tree or not
-  set upperBound = +infinity
-  set lowerBound = -infinity
-  if we go left then range changes to lowerBound to  node.data
-  if we go right then range changes to node.data to upperBound
+########################## AVL TREES   ########################
+* four cases 
+  * Single rotation :
+   * left left
+   * right right
+* Double rotation :
+   * right left :- 1.rotateRight  2.rotateLeft
+   * left right :- 1.rotateLeft   2.rotateRight
+   
+###############################################################
+  # Checking a given tree is binary search tree or not
+  * set upperBound = +infinity
+  * set lowerBound = -infinity
+  * if we go left then range changes to lowerBound to  node.data
+  * if we go right then range changes to node.data to upperBound
   CODE
-  bool isBST(Node *root,int min,max){
-  	if(root == NULL)
-  		return true;
-  	if(root->data < min || root->data > max)
-  		return false;
-  	return isBST(root->left,min,root->data) && isBST(root->right,root->data,max);		
-  }               
+  `bool isBST(Node *root,int min,max){`
+  	`if(root == NULL)`
+  		`return true;`
+  	`if(root->data < min || root->data > max)`
+  		`return false;`
+  	`return isBST(root->left,min,root->data) && isBST(root->right,root->data,max);`		
+  `}`
+  ##################################################################################################################
+  # Building tree given two traversals
+  * inorder & preorder then in recursive relation first construct left then right
+  * inorder & postorder then in recursive relation first construct right then left
                     
                                        
 
