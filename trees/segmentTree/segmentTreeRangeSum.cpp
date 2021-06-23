@@ -41,8 +41,63 @@ void update(ll parent,ll start,ll end,ll pos,ll val,ll level){
 		segment_tree[parent] = segment_tree[2*parent+1]^segment_tree[2*parent+2];	 
 	return;
 }
-
 */
+
+/*
+--------------------------------------ITERATIVE IMPLEMENTATION------------------------------------
+class NumArray {
+public:
+    vector<int> tree;
+    int n;
+    NumArray(vector<int>& nums) {
+        n = nums.size();
+        tree.resize(2*n);
+        buildTree(nums);
+    }
+    void buildTree(vector<int> &nums){
+        // int n = nums.size();
+        for(int i=n,j=0;i<2*n;i++,j++){
+            tree[i]=nums[j];
+        }
+        for(int i=n-1;i>0;i--){
+            tree[i]=tree[i*2]+tree[i*2+1];
+        }
+    } 
+    void update(int index, int val) {
+        index+=n;
+        tree[index]=val;
+        while(index>0){
+            int left = index;
+            int right=index;
+            if(index%2 == 0)
+                right=index+1;
+            else
+                left=index-1;
+            tree[index/2]=tree[left]+tree[right];
+            index/=2;
+        }
+    }
+    
+    int sumRange(int left, int right) {
+        left+=n;
+        right+=n;
+        int sum=0;
+        while(left<=right){
+            if(left%2){
+                sum+=tree[left++];
+            }
+            if(right%2 == 0)
+            {
+                sum+=tree[right--];
+            }
+            left/=2;
+            right/=2;
+        }
+        return sum;
+    }
+};
+*/
+
 struct SegmentTree{
 	/*Using one based indexing*/
 	vector<int> tree;
