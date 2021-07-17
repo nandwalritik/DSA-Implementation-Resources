@@ -1,6 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
+/*
+	Method
+		1.) Find topological sort
+		2.) Find the Transpose of Graph
+		3.) Perform dfs on transposed graph to find the component 
 
+*/
 void dfs1(vector<int> &order,vector<bool> &visited,vector<vector<int>> &adj,int u){
 	visited[u] = true;
 	for(auto x:adj[u])
