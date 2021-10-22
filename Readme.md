@@ -14,3 +14,7 @@
 * Watch all the videos of [Mycodeschool](https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P).
 * Try to implement side by side, and read some articles on [GFG](https://geeksforgeeks.org/) for the topics which you don't understand in single run. 
 
+### Level-3
+* For mastering trees watch Tushar Roy's [Trees](https://www.youtube.com/playlist?list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu) playlist, solve similar questions on [Leetcode](https://leetcode.com/).
+* For solving important interview questions on Datastructures, watch [Aditya Verma's](https://www.youtube.com/c/AdityaVermaTheProgrammingLord) stack,binary-search,recusrssion and heap playlist.
+* Learn Algorithms theory from [Abdul Bari Sir](https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O).
