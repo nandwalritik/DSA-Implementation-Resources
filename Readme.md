@@ -24,3 +24,13 @@
 * For DP watch Aditya Verma's [DP](https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go) playlist, the way he has explained, will help you to approach almost every new problem you will see on DP.
 * For graph I never followed any specific resource, but I mostly learned them from [cpalgorithms](https://cp-algorithms.com/#:~:text=O(Nlog%20N)-,Graphs,-Graph%20traversal) and [geeksforgeeks](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
 
+### Some Good Youtube Channels 
+* [Abdul-Bari](https://www.youtube.com/channel/UCZCFT11CWBi3MHNlGf019nw)
+* [Tushar-Roy](https://www.youtube.com/user/tusharroy2525)
+* [MyCodeSchool](https://www.youtube.com/user/mycodeschool)
+* [Aditya-Verma](https://www.youtube.com/c/AdityaVermaTheProgrammingLord)
+* [TakeUForward](https://www.youtube.com/c/takeUforward)
+
+### EndNote
+* This is the path which I followed while learning DSA, It may be different for you as more new resources are being added daily over the internet.Please star the repository if it helped you in one way or the other.
+* All the Best !!! 
