@@ -18,3 +18,9 @@
 * For mastering trees watch Tushar Roy's [Trees](https://www.youtube.com/playlist?list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu) playlist, solve similar questions on [Leetcode](https://leetcode.com/).
 * For solving important interview questions on Datastructures, watch [Aditya Verma's](https://www.youtube.com/c/AdityaVermaTheProgrammingLord) stack,binary-search,recusrssion and heap playlist.
 * Learn Algorithms theory from [Abdul Bari Sir](https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O).
+
+### Level-4
+* Last and the most Important topics which every programmer suffers learning! Graph and Dynamic Programming.
+* For DP watch Aditya Verma's [DP](https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go) playlist, the way he has explained, will help you to approach almost every new problem you will see on DP.
+* For graph I never followed any specific resource, but I mostly learned them from [cpalgorithms](https://cp-algorithms.com/#:~:text=O(Nlog%20N)-,Graphs,-Graph%20traversal) and [geeksforgeeks](https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/)
+
