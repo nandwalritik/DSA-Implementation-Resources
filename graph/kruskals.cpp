@@ -14,7 +14,7 @@ bool comp(node a,node b){
 int findPar(int u,vector<int> &parent){
     if(u == parent[u])
         return u;
-    return findPar(parent[u],parent);
+    return parent[u] = findPar(parent[u],parent);
 }
 void Union(int u,int v,vector<int> &parent,vector<int> &size){
     u = findPar(u,parent);
