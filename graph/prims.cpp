@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 /*
+    youtube :- https://www.youtube.com/watch?v=HnD676J56ak
     LOGIC
     1.) Maintain two sets
         i.)  First set contains vertices already included in MST
@@ -8,7 +9,11 @@ using namespace std;
     
     2.) At every step consider all edges that connects two sets
         pick the minm weight edge from these edges.
-
+-----------------------------------------------------------------------------------------------------------------
+    Use 3 arrays - keys,mstSet,parent
+        keys -> it contains current vertex se connected vertices ke edge ka weight (Initialized to INT_MAX)
+        mstSet ->  boolean array used to maintain record of vertex included in min span tree
+        parent -> parent of vertices (It can be used to print min span tree at last)
 
 */
 int main()
