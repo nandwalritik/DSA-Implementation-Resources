@@ -1,16 +1,4 @@
 """
-    To determine that a given graph contains hamiltonian cycle or not
-    Hamiltonian Path :- A path in undirected graph which visits every vertex exactly once
-    If there is an articulation point in graph then hamil cycle wont exist
-    
-"""
-
-"""
-    Code will remain same as hamiltonian path, only the base case for recurssive
-    call will change
-
-"""
-"""
     A Hamiltonian Path in a graph is a path that visits every vertex exactly once.
 
 """
@@ -18,7 +6,7 @@
 def is_hamiltonian_path(graph,path,visited,n):
     # if path includes all vertices we found a hamiltonian path
     if len(path) == n:
-        return path[0] in graph[path[-1]]
+        return True
     
     # try out all poss next vertices
     last_vertex = path[-1]
@@ -45,7 +33,6 @@ def find_hamiltonian_path(graph,n):
         visited[start] = True
         
         if is_hamiltonian_path(graph,path,visited,n):
-            path.append(path[0]) # closing the cycle
             return path 
     
     return None    
