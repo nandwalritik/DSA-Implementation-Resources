@@ -1,0 +1,39 @@
+An Eulerian path in a directed graph is a path that visits every edge exactly once. To determine if a directed graph has an Eulerian path and to find one, follow these steps:
+Step 1: Check Necessary Conditions
+
+A directed graph has an Eulerian path if and only if:
+
+    At most one vertex has (out-degree - in-degree) = 1.
+    At most one vertex has (in-degree - out-degree) = 1.
+    All other vertices must have equal in-degree and out-degree.
+    All non-zero degree vertices must be in a single strongly connected component (ignoring edge directions).
+
+    If there is exactly one vertex where out-degree is one more than in-degree (start node) and one vertex where in-degree is one more than out-degree (end node), the graph has an Eulerian path.
+    If all vertices have equal in-degree and out-degree, then the graph has an Eulerian circuit (which is also an Eulerian path).
+
+Step 2: Find the Eulerian Path (Hierholzer’s Algorithm)
+
+Once you confirm the conditions, use Hierholzer’s Algorithm to find the Eulerian path:
+1. Identify the Start Node
+
+    If the graph has an Eulerian circuit (all vertices have equal in/out degrees), start from any vertex.
+    If it has an Eulerian path, start from the vertex with out-degree = in-degree + 1.
+
+2. Construct the Path Using Hierholzer’s Algorithm
+
+    Start from the identified node and traverse edges until you reach a node with no outgoing edges.
+    Keep track of edges visited by removing them as you traverse.
+    If you get stuck at a node with remaining outgoing edges, start a new tour from that node and merge it into your current path.
+    Repeat until all edges are used.
+
+3. Reverse the Path (If Needed)
+
+    Since edges are removed in reverse order, the path needs to be reversed to get the correct sequence.
+
+
+
+    Complexity Analysis
+
+    Checking degrees: O(V)O(V)
+    Hierholzer's algorithm (traversing edges exactly once): O(E)O(E)
+    Overall Complexity: O(V+E)O(V+E)
